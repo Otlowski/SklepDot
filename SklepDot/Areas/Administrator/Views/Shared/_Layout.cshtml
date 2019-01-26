@@ -5,30 +5,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Admin Area</title>
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="/administrator/dashboard" class="navbar-brand">Dashboard</a>
+                <a class="navbar-brand" href="#">.NETSHOP MANAGEMENT</a>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li href="/" class="navbar-brand"></li>
-                </ul>
-                <ul class="navbar-right">
-                    <li><a href="/" class="navbar-brand" target="_blank">SklepDot</a></li>
-                </ul>
-            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/administrator/dashboard">Dashboard</a></li>
+                <li><a href="/administrator/pages/index">Market Pages CRUD</a></li>
+                <li><a href="/administrator/shop/categories">Categories CRUD</a></li>
+                <li><a href="/administrator/shop/addproduct">+ Products</a></li>
+            </ul>
         </div>
-    </div>
+    </nav>
     <div class="container body-content">
         @RenderBody()
         <hr />

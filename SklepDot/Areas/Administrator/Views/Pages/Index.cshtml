@@ -4,15 +4,15 @@
     ViewBag.Title = "Pages";
 }
 
-<h2>Pages</h2>
+<h2>Market Pages</h2>
 
 <p>
     @Html.ActionLink("Add New Page", "AddPage")
 </p>
 
-@if (! Model.Any())
+@if (!Model.Any())
 {
-    <h1 class="text-center"> No pages available.</h1>
+    <h1 class="text-center"> No market pages available.</h1>
 }
 else
 {
@@ -59,7 +59,7 @@ else
                     @Html.ActionLink("Details", "PageDetails", new { id = item.Id }) |
                     @if (item.Slug != "home")
                     {
-                    @Html.ActionLink("Delete", "DeletePage", new { id = item.Id }, new { @class = "delete" })
+                        @Html.ActionLink("Delete", "DeletePage", new { id = item.Id }, new { @class = "delete" })
                     }
                 </td>
             </tr>
@@ -70,12 +70,13 @@ else
 
 @section Scripts
 {
+    
     <script>
         $(function () {
             $("a.delete").click(function () {
                 if (!confirm("Confirm page deletion")) return false;
             });
         })
-    </script>   
+    </script>
 
 }
